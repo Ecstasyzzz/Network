@@ -2190,11 +2190,6 @@
             The <see cref="T:Network.Connection"/> should use UDP to communicate across the network.
             </summary>
         </member>
-        <member name="F:Network.Enums.ConnectionType.Bluetooth">
-            <summary>
-            The <see cref="T:Network.Connection"/> should use Bluetooth to communicate across the network.
-            </summary>
-        </member>
         <member name="T:Network.Enums.LogLevel">
             <summary>
             Enumerates the possible severity levels for a log message.
@@ -3286,7 +3281,7 @@
             <param name="ipAddress">The local ip address.</param>
             <param name="port">The local port.</param>
             <param name="rsaPair">The local RSA key-pair.</param>
-            <param name="start">Whether to automatically starts to listen to tcp/udp/bluetooth clients.</param>
+            <param name="start">Whether to automatically starts to listen to tcp and udp clients.</param>
         </member>
         <member name="M:Network.RSA.SecureServerConnectionContainer.#ctor(System.Int32,Network.RSA.RSAPair,System.Boolean)">
             <summary>
@@ -3294,7 +3289,7 @@
             </summary>
             <param name="port">The local port.</param>
             <param name="rsaPair">The local RSA key-pair.</param>
-            <param name="start">Whether to automatically starts to listen to tcp/udp/bluetooth clients.</param>
+            <param name="start">Whether to automatically starts to listen to tcp and udp clients.</param>
         </member>
         <member name="M:Network.RSA.SecureServerConnectionContainer.CreateTcpConnection(System.Net.Sockets.TcpClient)">
             <summary>
@@ -3505,7 +3500,7 @@
         </member>
         <member name="M:Network.ServerConnectionContainer.Start">
             <summary>
-            Starts both a Bluetooth and TCP server, and listens for incoming connections.
+            Starts the TCP server, and listens for incoming connections.
             </summary>
         </member>
         <member name="M:Network.ServerConnectionContainer.StartTCPListener">
@@ -3534,12 +3529,12 @@
         </member>
         <member name="M:Network.ServerConnectionContainer.Stop">
             <summary>
-            Stops both the Bluetooth and TCP listeners, so that no new connections can connect.
+            Stops both the TCP listeners, so that no new connections can connect.
             </summary>
         </member>
         <member name="M:Network.ServerConnectionContainer.CloseConnections(Network.Enums.CloseReason)">
             <summary>
-            Closes all currently connected <see cref="T:Network.Connection"/>s (be it Bluetooth, TCP, or UDP).
+            Closes all currently connected <see cref="T:Network.Connection"/>s (TCP or UDP).
             </summary>
             <param name="reason">The reason for the connection closure.</param>
         </member>

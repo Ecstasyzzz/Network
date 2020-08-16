@@ -116,7 +116,7 @@ namespace Network
         #region Methods
 
         /// <summary>
-        /// Starts both a Bluetooth and TCP server, and listens for incoming connections.
+        /// Starts the TCP server, and listens for incoming connections.
         /// </summary>
         public async Task Start()
         {
@@ -226,7 +226,7 @@ namespace Network
         }
 
         /// <summary>
-        /// Stops both the Bluetooth and TCP listeners, so that no new connections can connect.
+        /// Stops both the TCP listeners, so that no new connections can connect.
         /// </summary>
         public void Stop()
         {
@@ -234,7 +234,7 @@ namespace Network
         }
 
         /// <summary>
-        /// Closes all currently connected <see cref="Connection"/>s (be it Bluetooth, TCP, or UDP).
+        /// Closes all currently connected <see cref="Connection"/>s (TCP or UDP).
         /// </summary>
         /// <param name="reason">The reason for the connection closure.</param>
         public void CloseConnections(CloseReason reason)

@@ -22,7 +22,7 @@ namespace NetworkTestServer
         public void Demo()
         {
             //1. Start listen on a port
-            serverConnectionContainer = ConnectionFactory.CreateServerConnectionContainer(1234, false);
+            serverConnectionContainer = ConnectionFactory.CreateServerConnectionContainer(1234, true);
 
             //2. Apply optional settings.
             #region Optional settings
@@ -33,9 +33,6 @@ namespace NetworkTestServer
             serverConnectionContainer.UDPConnectionLimit = 2;
 
             #endregion Optional settings
-
-            //Call start here, because we had to enable the bluetooth property at first.
-            serverConnectionContainer.Start();
 
             //Don't close the application.
             Console.ReadLine();

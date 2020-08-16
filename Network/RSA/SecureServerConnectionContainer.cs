@@ -16,7 +16,7 @@ namespace Network.RSA
         /// <param name="ipAddress">The local ip address.</param>
         /// <param name="port">The local port.</param>
         /// <param name="rsaPair">The local RSA key-pair.</param>
-        /// <param name="start">Whether to automatically starts to listen to tcp/udp/bluetooth clients.</param>
+        /// <param name="start">Whether to automatically starts to listen to tcp and udp clients.</param>
         internal SecureServerConnectionContainer(string ipAddress, int port, RSAPair rsaPair, bool start = true)
             : base(ipAddress, port, start)
         {
@@ -28,7 +28,7 @@ namespace Network.RSA
         /// </summary>
         /// <param name="port">The local port.</param>
         /// <param name="rsaPair">The local RSA key-pair.</param>
-        /// <param name="start">Whether to automatically starts to listen to tcp/udp/bluetooth clients.</param>
+        /// <param name="start">Whether to automatically starts to listen to tcp and udp clients.</param>
         internal SecureServerConnectionContainer(int port, RSAPair rsaPair, bool start = true)
             : this(System.Net.IPAddress.Any.ToString(), port, rsaPair, start) { }
 
